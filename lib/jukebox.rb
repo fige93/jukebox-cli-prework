@@ -30,16 +30,15 @@ def play(songs)
   songOutput = ""
   puts "Please enter a song name or number:"
   userInput = gets.chomp
-  puts userInput
     songs.each_with_index do |song, index|
       if song == userInput.to_s || index == userInput.to_i
         songOutput = song
       end
   end
   if songOutput.empty?
-    "Invalid input, please try again"
+    puts "Invalid input, please try again"
   else
-    "Playing #{songOutput}"
+    puts "Playing #{songOutput}"
   end
 end
 
