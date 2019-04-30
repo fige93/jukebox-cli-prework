@@ -50,8 +50,16 @@ end
 def run
   help
   puts "Please enter a command:"
+  answer = ""
   until answer == "exit"
     answer = gets.chomp
+    if answer == "list"
+      list(songs)
+    elsif answer == "play"
+      play(songs)
+    elsif answer == "exit"
+      exit_jukebox
+    end
   end
 end
 
