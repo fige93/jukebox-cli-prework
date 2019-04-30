@@ -30,6 +30,7 @@ def play(songs)
   songOutput = ""
   puts "Please enter a song name or number:"
   userInput = gets.chomp
+  songs.unshift("")
     songs.each_with_index do |song, index|
       if song == userInput.to_s || index == userInput.to_i
         songOutput = song
